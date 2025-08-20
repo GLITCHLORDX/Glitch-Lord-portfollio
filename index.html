@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Glitch Lord-portfollio</title>
-
-    <!-- Google AdSense Global Script -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2671231160324600"
-     crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <a href="#" class="logo">GlitchLord</a>
+
         <nav>
             <a href="#home"> Home</a>
             <a href="#services">Services</a>
@@ -22,18 +20,6 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
-
-    <!-- Ad 1: Below Header -->
-    <div style="margin:20px 0; text-align:center;">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-2671231160324600"
-             data-ad-slot="2958217047"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
     <section class="home" id="home">
         <div class="home-img">
             <img src="main.jpg" alt="">
@@ -51,7 +37,6 @@
             <a href="#" class="btn">Hire me</a>
         </div>
     </section>
-
     <section class="services" id="services">
         <h2 class="heading">My <span>Services</span></h2>
         <div class="services-container">
@@ -72,18 +57,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Ad 2: After Services -->
-    <div style="margin:20px 0; text-align:center;">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-2671231160324600"
-             data-ad-slot="2958217047"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
     <section class="skills" id="skills">
         <h2 class="heading">My <span>Skills</span></h2>
         <div class="services-container skills-container">
@@ -112,19 +85,7 @@
                 <h3>Content Creation (YouTube)</h3>
             </div>
         </div>
-    </section>
-
-    <!-- Ad 3: After Skills -->
-    <div style="margin:20px 0; text-align:center;">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-2671231160324600"
-             data-ad-slot="2958217047"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
+   
     <section class="experience" id="experience">
         <h2 class="heading">My <span>Experience</span></h2>
         <div class="timeline">
@@ -166,18 +127,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Ad 4: Before Contact -->
-    <div style="margin:20px 0; text-align:center;">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-2671231160324600"
-             data-ad-slot="2958217047"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
         <div class="contact-container">
@@ -204,7 +153,6 @@
     </section>
 </body>
 </html>
-
 <script>
 // Dynamic nav active link highlight
 const navLinks = document.querySelectorAll('nav a');
@@ -227,5 +175,7 @@ function onScroll() {
     });
 }
 window.addEventListener('scroll', onScroll);
+// Also update on load
 window.addEventListener('DOMContentLoaded', onScroll);
+
 </script>
