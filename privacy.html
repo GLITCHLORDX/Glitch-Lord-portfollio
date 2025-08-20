@@ -1,114 +1,98 @@
-<!-- Consent Banner -->
-<div id="consent-banner" class="consent-banner">
-  <div class="consent-content">
-    <h2>🍪 Cookie & Privacy Notice</h2>
-    <p>
-      I use cookies and data to improve your browsing experience, show relevant ads, 
-      and understand traffic. You can accept, reject, or customize your choices.
-    </p>
-    <div class="consent-buttons">
-      <button class="btn accept" onclick="acceptConsent()">Accept</button>
-      <button class="btn reject" onclick="rejectConsent()">Reject</button>
-      <button class="btn customize" onclick="openPreferences()">Preferences</button>
-    </div>
-  </div>
-</div>
-
-<style>
-  /* Banner container */
-  .consent-banner {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 600px;
-    width: 90%;
-    background: #111; /* portfolio dark background */
-    color: #f5f5f5;
-    border: 1px solid #333;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-    font-family: 'Inter', sans-serif;
-    z-index: 9999;
-    animation: slideUp 0.5s ease-out;
-  }
-
-  .consent-content h2 {
-    font-size: 1.3rem;
-    margin: 0 0 0.5rem;
-    font-weight: 600;
-    color: #fff;
-  }
-
-  .consent-content p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #aaa;
-    margin-bottom: 1rem;
-  }
-
-  .consent-buttons {
-    display: flex;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    padding: 0.6rem 1.2rem;
-    border: none;
-    border-radius: 0.6rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .btn.accept {
-    background: linear-gradient(135deg, #00ffcc, #0099ff);
-    color: #111;
-  }
-
-  .btn.reject {
-    background: #222;
-    color: #eee;
-    border: 1px solid #444;
-  }
-
-  .btn.customize {
-    background: #333;
-    color: #aaa;
-    border: 1px solid #444;
-  }
-
-  .btn:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-  }
-
-  @keyframes slideUp {
-    from {opacity: 0; transform: translate(-50%, 20px);}
-    to {opacity: 1; transform: translate(-50%, 0);}
-  }
-</style>
-
-<script>
-  function acceptConsent() {
-    document.getElementById("consent-banner").style.display = "none";
-    localStorage.setItem("consent", "accepted");
-  }
-  function rejectConsent() {
-    document.getElementById("consent-banner").style.display = "none";
-    localStorage.setItem("consent", "rejected");
-  }
-  function openPreferences() {
-    alert("Preferences panel will open here...");
-  }
-
-  // Show only if no choice saved
-  window.onload = () => {
-    if(!localStorage.getItem("consent")) {
-      document.getElementById("consent-banner").style.display = "block";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Glitch Lord Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #eee;
+      line-height: 1.7;
     }
-  }
-</script>
+
+    .container {
+      max-width: 800px;
+      margin: 5rem auto;
+      padding: 2rem;
+      background: #111;
+      border-radius: 1rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #ff4c4c;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      color: #00ffcc;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #ccc;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    a {
+      color: #0099ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p>
+      At Glitch Lord Portfolio, your privacy is very important to us. This Privacy Policy explains 
+      how we collect, use, and protect your personal information when you visit and interact with our website.
+    </p>
+
+    <h2>Information We Collect</h2>
+    <p>
+      We may collect personal information (such as your name, email address, and message content) that you 
+      voluntarily provide when contacting us. We may also collect non-personal data (such as browser type, 
+      device information, and pages visited) for analytics and improvement purposes.
+    </p>
+
+    <h2>Use of Google AdSense</h2>
+    <p>
+      This site uses Google AdSense to serve ads. Google may use cookies to display personalized ads based on your interests 
+      and previous interactions. You can learn more about how Google uses your data here: 
+      <a href="https://policies.google.com/technologies/ads" target="_blank">Google Ads Policy</a>.
+    </p>
+
+    <h2>How We Use Your Information</h2>
+    <ul>
+      <li>To respond to your inquiries and provide support.</li>
+      <li>To improve the website’s functionality and user experience.</li>
+      <li>To serve relevant ads through Google AdSense.</li>
+    </ul>
+
+    <h2>Your Choices</h2>
+    <p>
+      You can choose to disable cookies in your browser settings if you do not want personalized ads. 
+      However, some features of the site may not work as intended without cookies.
+    </p>
+
+    <h2>Contact Us</h2>
+    <p>
+      If you have any questions regarding this Privacy Policy, please contact us at: 
+      <a href="mailto:glitchloard@gmail.com">glitchloard@gmail.com</a>
+    </p>
+  </div>
+</body>
+</html>
