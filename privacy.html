@@ -22,6 +22,27 @@
       font-size: 2rem;
       font-weight: bold;
       border-bottom: 2px solid #ff4444;
+      position: relative;
+    }
+
+    /* Back button style */
+    .back-btn {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #1a1a1a;
+      color: #ff4444;
+      border: 1px solid #ff4444;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    .back-btn:hover {
+      background: #ff4444;
+      color: #fff;
     }
 
     .container {
@@ -123,7 +144,10 @@
 </head>
 <body>
 
-  <header>Privacy Policy</header>
+  <header>
+    <a href="javascript:history.back()" class="back-btn">← Back</a>
+    Privacy Policy
+  </header>
 
   <div class="container">
     <h2>1. Introduction</h2>
