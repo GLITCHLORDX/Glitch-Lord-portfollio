@@ -3,144 +3,193 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio with Privacy Policy Popup</title>
+  <title>Privacy Policy</title>
   <style>
     body {
-      font-family: "Segoe UI", sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      background: #0f172a; /* dark navy background */
-      color: #f8fafc; /* light text */
-    }
-
-    header {
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    button {
-      background: #6366f1;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-size: 16px;
-      color: #fff;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: #4f46e5;
-    }
-
-    /* Popup overlay */
-    .popup-overlay {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.7);
-      backdrop-filter: blur(4px);
-      z-index: 999;
-    }
-
-    /* Popup box */
-    .popup {
-      position: relative;
-      background: #1e293b;
-      width: 70%;
-      max-height: 80%;
-      overflow-y: auto;
-      margin: 5% auto;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-      animation: fadeIn 0.3s ease-in-out;
-    }
-
-    .popup h2 {
-      color: #38bdf8;
-      margin-top: 0;
-    }
-
-    .popup p {
+      padding: 0;
       line-height: 1.6;
-      margin: 12px 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2c3e50;
+      color: white;
+      margin-top: 40px;
     }
 
-    /* Close button */
-    .close-btn {
-      position: absolute;
-      top: 15px; right: 15px;
-      background: #ef4444;
+    /* Cookie Popup */
+    #cookiePopup {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: #fff;
+      padding: 20px;
+      border: 2px solid #2c3e50;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      border-radius: 10px;
+      display: none;
+      z-index: 9999;
+      max-width: 600px;
+      margin: auto;
+    }
+    #cookiePopup p {
+      margin: 0 0 10px;
+    }
+    .cookie-btns {
+      display: flex;
+      gap: 10px;
+    }
+    .cookie-btns button {
+      padding: 10px 15px;
       border: none;
-      padding: 8px 12px;
-      color: #fff;
       border-radius: 6px;
       cursor: pointer;
     }
-
-    .close-btn:hover {
-      background: #dc2626;
+    .accept {
+      background: #27ae60;
+      color: white;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.9);}
-      to { opacity: 1; transform: scale(1);}
+    .decline {
+      background: #c0392b;
+      color: white;
+    }
+    .manage {
+      background: #2980b9;
+      color: white;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>My Portfolio</h1>
-    <p>Welcome to my personal space on the web 🚀</p>
-    <button onclick="openPopup()">Privacy Policy</button>
+    <h1>Privacy Policy</h1>
   </header>
 
-  <!-- Privacy Policy Popup -->
-  <div class="popup-overlay" id="popupOverlay">
-    <div class="popup">
-      <button class="close-btn" onclick="closePopup()">X</button>
-      <h2>Privacy Policy</h2>
-      <p><strong>1. Information Collection:</strong>  
-      We may collect basic details such as your name, email address, and messages you send through contact forms. This helps us understand you better and improve communication. We do not collect unnecessary or sensitive data without your consent.</p>
+  <div class="container">
+    <h2>1. Introduction</h2>
+    <p>
+      Your privacy is extremely important to us. This Privacy Policy explains how we collect, use, store, and protect your information when you interact with our website. We are committed to safeguarding your personal data and ensuring transparency in how it is handled.
+    </p>
 
-      <p><strong>2. Use of Data:</strong>  
-      The information you share is used to respond to your queries, improve user experience, and enhance the content of this website. For instance, if you provide your email, it will only be used for communication or updates you request, not for spamming.</p>
+    <h2>2. Information We Collect</h2>
+    <p>
+      We may collect personal information that you voluntarily provide, such as your name, email address, and contact details. Additionally, we may automatically collect non-personal information such as your IP address, browser type, operating system, and browsing behavior on our website.
+    </p>
 
-      <p><strong>3. Cookies & Tracking:</strong>  
-      This site may use cookies—small text files stored on your device—to remember your preferences (like dark/light mode or language settings). These cookies do not harm your device and are only used for personalization.</p>
+    <h2>3. Cookies and Tracking</h2>
+    <p>
+      Our website uses cookies to enhance your browsing experience. Cookies are small text files stored on your device that help us recognize you when you return. We use cookies for:
+    </p>
+    <ul>
+      <li><strong>Essential Cookies:</strong> Required for the basic functionality of the site.</li>
+      <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website.</li>
+      <li><strong>Advertising Cookies:</strong> Deliver personalized advertisements based on your interests.</li>
+    </ul>
 
-      <p><strong>4. Third-Party Services:</strong>  
-      If we use tools like Google Analytics, they may gather anonymous traffic data (like pages visited, time spent). These third parties follow their own strict privacy standards, and no personal details are exposed without your consent.</p>
+    <h2>4. How We Use Your Information</h2>
+    <p>
+      The data we collect is used to improve our services, personalize your experience, send relevant updates, and for security purposes. We may also use your information to comply with legal obligations.
+    </p>
 
-      <p><strong>5. Data Protection:</strong>  
-      Your information is treated with care. We use modern security practices to prevent unauthorized access, data leaks, or misuse. However, no system can guarantee 100% security, so we encourage you to avoid sharing highly sensitive personal info here.</p>
+    <h2>5. Third-Party Services</h2>
+    <p>
+      We may share limited information with trusted third-party providers, such as analytics services or advertising partners. These third parties are required to protect your information and may not use it for other purposes.
+    </p>
 
-      <p><strong>6. Sharing of Information:</strong>  
-      We never sell, rent, or trade your personal data. Information is only shared when legally required or to protect the rights and safety of users and this website.</p>
+    <h2>6. Your Rights</h2>
+    <p>
+      You have the right to access, update, or delete your personal data. You may also withdraw your consent for cookie usage at any time by managing your preferences in the cookie settings.
+    </p>
 
-      <p><strong>7. Children’s Privacy:</strong>  
-      This website is not specifically targeted toward children under 13. We encourage parents to monitor their children’s internet usage. If we ever discover we have collected data from a child without consent, it will be deleted immediately.</p>
+    <h2>7. Data Security</h2>
+    <p>
+      We use encryption, firewalls, and secure servers to protect your data from unauthorized access, alteration, or disclosure. However, no method of transmission over the internet is 100% secure.
+    </p>
 
-      <p><strong>8. Policy Updates:</strong>  
-      Privacy policies may evolve as technology and laws change. Updates will always be posted here, and major changes will be highlighted so you are aware of what has changed.</p>
+    <h2>8. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. Updates will be posted on this page with a revised “Last Updated” date.
+    </p>
 
-      <p><strong>9. Your Rights:</strong>  
-      You have the right to request access to the data we hold about you, ask for corrections, or even request deletion. Simply contact us if you’d like to exercise any of these rights.</p>
+    <h2>9. Contact Us</h2>
+    <p>
+      If you have questions or concerns about this Privacy Policy, please contact us via our website’s contact page.
+    </p>
+  </div>
 
-      <p><strong>10. Contact:</strong>  
-      For any questions or concerns regarding privacy, feel free to reach out via the contact form or email provided on this site.</p>
+  <footer>
+    <p>&copy; 2025 Your Website. All rights reserved.</p>
+  </footer>
+
+  <!-- Cookie Popup -->
+  <div id="cookiePopup">
+    <p>
+      We use cookies to improve your experience, analyze site traffic, and deliver personalized content. 
+      By clicking "Accept", you agree to our use of cookies as described in our Privacy Policy.
+    </p>
+    <div class="cookie-btns">
+      <button class="accept" onclick="acceptCookies()">Accept</button>
+      <button class="decline" onclick="declineCookies()">Decline</button>
+      <button class="manage" onclick="manageCookies()">Manage Options</button>
     </div>
   </div>
 
   <script>
-    function openPopup() {
-      document.getElementById("popupOverlay").style.display = "block";
+    function getCookie(name) {
+      let value = "; " + document.cookie;
+      let parts = value.split("; " + name + "=");
+      if (parts.length === 2) return parts.pop().split(";").shift();
     }
 
-    function closePopup() {
-      document.getElementById("popupOverlay").style.display = "none";
+    function setCookie(name, value, days) {
+      let expires = "";
+      if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    }
+
+    function acceptCookies() {
+      setCookie("cookieConsent", "accepted", 365);
+      document.getElementById("cookiePopup").style.display = "none";
+    }
+
+    function declineCookies() {
+      setCookie("cookieConsent", "declined", 365);
+      document.getElementById("cookiePopup").style.display = "none";
+    }
+
+    function manageCookies() {
+      alert("Here you could allow users to choose specific cookie categories (Essential, Analytics, Advertising). For now, please check our Privacy Policy for details.");
+    }
+
+    window.onload = function() {
+      if (!getCookie("cookieConsent")) {
+        document.getElementById("cookiePopup").style.display = "block";
+      }
     }
   </script>
 </body>
