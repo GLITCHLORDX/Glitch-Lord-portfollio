@@ -9,34 +9,44 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f7f7f7;
-      color: #333;
+      background: #0d0d0d; /* dark background */
+      color: #ddd; /* light gray text */
       line-height: 1.7;
     }
 
     header {
-      background: #222;
-      color: white;
+      background: #111;
+      color: #ff4444; /* red header text */
       padding: 30px;
       text-align: center;
       font-size: 2rem;
+      font-weight: bold;
+      border-bottom: 2px solid #ff4444;
     }
 
     .container {
       max-width: 1100px;
       margin: auto;
       padding: 30px;
-      background: #fff;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      background: #1a1a1a; /* dark container */
+      box-shadow: 0 4px 20px rgba(255,0,0,0.2);
       border-radius: 10px;
       margin-top: 30px;
       margin-bottom: 80px;
     }
 
     h2 {
-      color: #222;
-      border-left: 4px solid #0077ff;
+      color: #ff4444; /* red headings */
+      border-left: 4px solid #ff0000;
       padding-left: 10px;
+    }
+
+    p, ul, li {
+      color: #ccc; /* softer text */
+    }
+
+    ul {
+      padding-left: 20px;
     }
 
     /* Cookie Popup */
@@ -44,9 +54,9 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: #fff;
+      background: #1a1a1a;
       border-radius: 10px;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 25px rgba(255,0,0,0.4);
       width: 340px;
       max-width: 90%;
       padding: 20px;
@@ -54,17 +64,18 @@
       display: none;
       z-index: 1000;
       animation: fadeIn 0.6s ease-in-out;
+      border: 1px solid #ff0000;
     }
 
     #cookie-popup h3 {
       margin-top: 0;
       font-size: 18px;
-      color: #111;
+      color: #ff4444;
     }
 
     #cookie-popup p {
       font-size: 14px;
-      color: #444;
+      color: #ccc;
     }
 
     .cookie-btns {
@@ -84,22 +95,24 @@
     }
 
     .accept {
-      background: #0077ff;
+      background: #ff0000;
       color: white;
     }
 
     .reject {
-      background: #e74c3c;
-      color: white;
+      background: #444;
+      color: #ff0000;
+      border: 1px solid #ff0000;
     }
 
     .manage {
-      background: #777;
-      color: white;
+      background: #222;
+      color: #fff;
+      border: 1px solid #ff4444;
     }
 
     .cookie-btns button:hover {
-      opacity: 0.9;
+      opacity: 0.85;
     }
 
     @keyframes fadeIn {
@@ -183,7 +196,7 @@
 
     <h2>11. Contact Us</h2>
     <p>
-      If you have any questions about this Privacy Policy, you can contact us at: <b>crazygaming65432@gmail.com</b>
+      If you have any questions about this Privacy Policy, you can contact us at: <b style="color:#ff4444;">crazygaming65432@gmail.com</b>
     </p>
   </div>
 
