@@ -1,0 +1,114 @@
+<!-- Consent Banner -->
+<div id="consent-banner" class="consent-banner">
+  <div class="consent-content">
+    <h2>🍪 Cookie & Privacy Notice</h2>
+    <p>
+      I use cookies and data to improve your browsing experience, show relevant ads, 
+      and understand traffic. You can accept, reject, or customize your choices.
+    </p>
+    <div class="consent-buttons">
+      <button class="btn accept" onclick="acceptConsent()">Accept</button>
+      <button class="btn reject" onclick="rejectConsent()">Reject</button>
+      <button class="btn customize" onclick="openPreferences()">Preferences</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Banner container */
+  .consent-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 600px;
+    width: 90%;
+    background: #111; /* portfolio dark background */
+    color: #f5f5f5;
+    border: 1px solid #333;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    font-family: 'Inter', sans-serif;
+    z-index: 9999;
+    animation: slideUp 0.5s ease-out;
+  }
+
+  .consent-content h2 {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .consent-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #aaa;
+    margin-bottom: 1rem;
+  }
+
+  .consent-buttons {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .btn.accept {
+    background: linear-gradient(135deg, #00ffcc, #0099ff);
+    color: #111;
+  }
+
+  .btn.reject {
+    background: #222;
+    color: #eee;
+    border: 1px solid #444;
+  }
+
+  .btn.customize {
+    background: #333;
+    color: #aaa;
+    border: 1px solid #444;
+  }
+
+  .btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
+  @keyframes slideUp {
+    from {opacity: 0; transform: translate(-50%, 20px);}
+    to {opacity: 1; transform: translate(-50%, 0);}
+  }
+</style>
+
+<script>
+  function acceptConsent() {
+    document.getElementById("consent-banner").style.display = "none";
+    localStorage.setItem("consent", "accepted");
+  }
+  function rejectConsent() {
+    document.getElementById("consent-banner").style.display = "none";
+    localStorage.setItem("consent", "rejected");
+  }
+  function openPreferences() {
+    alert("Preferences panel will open here...");
+  }
+
+  // Show only if no choice saved
+  window.onload = () => {
+    if(!localStorage.getItem("consent")) {
+      document.getElementById("consent-banner").style.display = "block";
+    }
+  }
+</script>
